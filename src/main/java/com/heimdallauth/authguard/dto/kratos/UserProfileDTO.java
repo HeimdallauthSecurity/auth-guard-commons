@@ -1,4 +1,4 @@
-package com.heimdallauth.authguard.dto;
+package com.heimdallauth.authguard.dto.kratos;
 
 import com.heimdallauth.authguard.common.UserStatus;
 import lombok.AllArgsConstructor;
