@@ -1,5 +1,6 @@
 package com.heimdallauth.authguard.dto;
 
+import com.heimdallauth.authguard.common.GroupStatus;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -10,8 +11,8 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @Data
 public class GroupDTO {
-    private String groupId;
-    private String tenantId;
-    private String groupName;
-    private String groupDescription;
+   private String groupId;
+   private String groupName;
+   private String groupDescription;
+   private GroupStatus status;
 }

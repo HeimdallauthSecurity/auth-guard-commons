@@ -12,16 +12,14 @@ import java.time.Instant;
 @AllArgsConstructor
 @Data
 public class UserProfileDTO {
-    private String userProfileId;
+    private String userId;
     private String username;
+    private String userFirstname;
+    private String userLastName;
     private String emailAddress;
-    private String firstName;
-    private String lastName;
     private String phoneNumber;
-    private String managerId;
+    private String avatarUrl;
+    private Instant dateOfBirth;
     private Instant createdOn;
     private Instant updatedOn;
-    private boolean isActive;
-    private boolean isVendorAccount;
-    private String vendorProfileId;
 }
