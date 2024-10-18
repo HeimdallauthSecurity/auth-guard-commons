@@ -1,5 +1,6 @@
-package com.heimdallauth.authguard.dto;
+package com.heimdallauth.authguard.dto.kratos;
 
+import com.heimdallauth.authguard.common.UserStatus;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -12,16 +13,14 @@ import java.time.Instant;
 @AllArgsConstructor
 @Data
 public class UserProfileDTO {
-    private String userProfileId;
-    private String username;
+    private String userId;
+    private String login;
     private String emailAddress;
     private String firstName;
     private String lastName;
-    private String phoneNumber;
-    private String managerId;
+    private String profileImageUrl;
     private Instant createdOn;
     private Instant updatedOn;
-    private boolean isActive;
-    private boolean isVendorAccount;
-    private String vendorProfileId;
+    private Instant lastLoginTimestamp;
+    private UserStatus status;
 }
