@@ -30,5 +30,8 @@ public class HeimdallResourceName {
         this.objectId = parts[5];
         this.containedResource = parts[6];
     }
+    public String generateHRN(Partition hrnPartition, Service hrnService, String hrnOrganizationId, String hrnObjectType, String objectId, String containedResource){
+        return String.join(HRN_DELIMITER, HRN_PREFIX, hrnPartition.name(), hrnService.name(), hrnOrganizationId, hrnObjectType, objectId, containedResource);
+    }
 
 }
