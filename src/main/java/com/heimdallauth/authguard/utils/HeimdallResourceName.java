@@ -30,8 +30,9 @@ public class HeimdallResourceName {
         this.objectId = parts[5];
         this.containedResource = parts[6];
     }
-    public static String generateHRN(Partition hrnPartition, Service hrnService, String hrnOrganizationId, String hrnObjectType, String objectId, String containedResource){
-        return String.join(HRN_DELIMITER, HRN_PREFIX, hrnPartition.name(), hrnService.name(), hrnOrganizationId, hrnObjectType, objectId, containedResource);
-    }
+    public static String generateHRN(Service hrnService, String hrnOrganizationId, String hrnObjectType, String objectId, String containedResource, boolean isPreview) {
+    String partition = isPreview ? Partition.HEIMDALL_PREVIEW.name() : Partition.HEIMDALL.name();
+    return String.join(HRN_DELIMITER, HRN_PREFIX, partition, hrnService.name(), hrnOrganizationId, hrnObjectType, objectId, containedResource);
+}
 
 }
